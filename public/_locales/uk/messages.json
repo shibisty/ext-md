@@ -1,0 +1,277 @@
+{
+  "appName": {
+    "message": "Media Grabber — збереження картинок і відео"
+  },
+  "appDesc": {
+    "message": "Знаходить усі картинки та відео на сторінці й дозволяє завантажити вибрані файли на диск."
+  },
+  "tabAll": {
+    "message": "Усі"
+  },
+  "tabImages": {
+    "message": "Картинки"
+  },
+  "tabVideos": {
+    "message": "Відео"
+  },
+  "refreshTitle": {
+    "message": "Пересканувати сторінку"
+  },
+  "themeToggleTitle": {
+    "message": "Змінити тему"
+  },
+  "selectAllTitle": {
+    "message": "Вибрати/зняти всі"
+  },
+  "shiftHint": {
+    "message": "Shift/Ctrl+клік або протягування мишею — вибрати декілька"
+  },
+  "colPicture": {
+    "message": "Картинка"
+  },
+  "colSize": {
+    "message": "Розмір"
+  },
+  "colFormat": {
+    "message": "Формат"
+  },
+  "selectedLabel": {
+    "message": "Вибрано: $SELECTED$ з $TOTAL$",
+    "placeholders": {
+      "selected": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "loadingText": {
+    "message": "Сканую сторінку…"
+  },
+  "emptyDefault": {
+    "message": "На сторінці не знайдено картинок або відео."
+  },
+  "emptyUnavailable": {
+    "message": "Цю сторінку не можна просканувати."
+  },
+  "scanFailed": {
+    "message": "Не вдалося просканувати сторінку."
+  },
+  "scanErrorPrefix": {
+    "message": "Помилка сканування: "
+  },
+  "noActiveTab": {
+    "message": "Не вдалося визначити активну вкладку."
+  },
+  "askSaveLocation": {
+    "message": "Питати місце збереження для кожного файлу"
+  },
+  "downloadButton": {
+    "message": "Завантажити вибране ($COUNT$)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusDownloading": {
+    "message": "Завантажую $COUNT$ файл(ів)…",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusNoStart": {
+    "message": "Не вдалося розпочати завантаження."
+  },
+  "statusSuccess": {
+    "message": "Готово: збережено $COUNT$ файл(ів) у папку Downloads/MediaGrabber.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusPartial": {
+    "message": "Збережено $OK$, помилок: $FAIL$.",
+    "placeholders": {
+      "ok": {
+        "content": "$1"
+      },
+      "fail": {
+        "content": "$2"
+      }
+    }
+  },
+  "statusError": {
+    "message": "Помилка: $MSG$",
+    "placeholders": {
+      "msg": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeImageDefault": {
+    "message": "img"
+  },
+  "badgeVideoDefault": {
+    "message": "video"
+  },
+  "openSidePanelTitle": {
+    "message": "Відкрити в бічній панелі"
+  },
+  "openSettingsTitle": {
+    "message": "Налаштування"
+  },
+  "sizeFrom": {
+    "message": "Від, px"
+  },
+  "sizeTo": {
+    "message": "До, px"
+  },
+  "sizeFilterClear": {
+    "message": "Скинути"
+  },
+  "expandTitle": {
+    "message": "Відкрити більше"
+  },
+  "commandDownloadAllDesc": {
+    "message": "Завантажити всі знайдені/вибрані файли одразу"
+  },
+  "settingsTitle": {
+    "message": "Media Grabber — Налаштування"
+  },
+  "settingsLanguage": {
+    "message": "Мова"
+  },
+  "langAuto": {
+    "message": "Системна (мова браузера)"
+  },
+  "settingsTheme": {
+    "message": "Тема"
+  },
+  "themeSystem": {
+    "message": "Системна (за замовчуванням)"
+  },
+  "themeLight": {
+    "message": "Світла"
+  },
+  "themeDark": {
+    "message": "Темна"
+  },
+  "settingsDownload": {
+    "message": "Куди зберігати файли"
+  },
+  "modeDownloadsTitle": {
+    "message": "Папка завантажень"
+  },
+  "modeDownloadsDesc": {
+    "message": "Кожен файл потрапляє в Downloads/<папка>/<сайт>/… Діалог збереження ніколи не показується."
+  },
+  "subfolderLabel": {
+    "message": "Назва підпапки:"
+  },
+  "modeZipTitle": {
+    "message": "Один .zip архів"
+  },
+  "modeZipDesc": {
+    "message": "Усі вибрані файли пакуються в один .zip і завантажуються одним файлом."
+  },
+  "modeDirTitle": {
+    "message": "Папка на вибір (запитає один раз)"
+  },
+  "modeDirDesc": {
+    "message": "Виберіть папку один раз — далі всі файли зберігатимуться прямо туди, без повторних діалогів."
+  },
+  "pickDirButton": {
+    "message": "Обрати папку…"
+  },
+  "clearDirButton": {
+    "message": "Забути папку"
+  },
+  "dirUnsupportedNote": {
+    "message": "Цей режим працює лише в Chrome/Edge — тут недоступний."
+  },
+  "noFolderChosen": {
+    "message": "Папку ще не обрано"
+  },
+  "settingsHotkey": {
+    "message": "Гаряча клавіша"
+  },
+  "changeHotkeyButton": {
+    "message": "Змінити…"
+  },
+  "hotkeyNotSet": {
+    "message": "не призначена"
+  },
+  "hotkeyNote": {
+    "message": "Завантажує всі поточні вибрані (або всі знайдені під час першого сканування) файли без відкриття попапу — окрім режиму «папка на вибір»."
+  },
+  "settingsCache": {
+    "message": "Пам'ять вибору по сторінці"
+  },
+  "clearCacheButton": {
+    "message": "Очистити збережені вибори"
+  },
+  "cacheNote": {
+    "message": "Media Grabber запам'ятовує, які позначки ви залишили на кожній конкретній сторінці (за точним URL), і відновлює їх при наступному візиті."
+  },
+  "savedText": {
+    "message": "Збережено"
+  },
+  "ctxSaveThis": {
+    "message": "Зберегти це"
+  },
+  "ctxSelectOnly": {
+    "message": "Вибрати лише це"
+  },
+  "ctxOpenLarge": {
+    "message": "Відкрити більше"
+  },
+  "ctxOpenTab": {
+    "message": "Відкрити в новій вкладці"
+  },
+  "ctxCopyLink": {
+    "message": "Копіювати посилання"
+  },
+  "ctxLinkCopied": {
+    "message": "Посилання скопійовано"
+  },
+  "statusStreamWarning": {
+    "message": "Збережено $OK$, потік(и) недоступні для завантаження: $STREAMFAILED$ — це HLS/DASH-відео, браузер не віддає вихідні байти напряму.",
+    "placeholders": {
+      "ok": {
+        "content": "$1"
+      },
+      "streamfailed": {
+        "content": "$2"
+      }
+    }
+  },
+  "streamFormatHint": {
+    "message": "Потокове відео (HLS/DASH) — під час завантаження може не спрацювати, браузер не завжди віддає вихідні байти"
+  },
+  "streamPreviewUnavailable": {
+    "message": "Це потокове відео — браузер не віддає файл напряму, показати повністю або завантажити не можна. Показано останній захоплений кадр."
+  },
+  "ctrlHint": {
+    "message": "Клік — вибрати/зняти, Shift+клік — діапазон, протягування — декілька"
+  },
+  "modeDownloadsDescShort": {
+    "message": "Без діалогів узагалі."
+  },
+  "modeZipDescShort": {
+    "message": "Один архів, одне завантаження."
+  },
+  "modeDirDescShort": {
+    "message": "Запитає один раз, далі мовчки."
+  },
+  "permNeeded": {
+    "message": "Firefox ще не надав Media Grabber доступ до сайтів — без нього не читаються зовнішні CSS-файли та медіа з інших доменів."
+  },
+  "permGrant": {
+    "message": "Дозволити"
+  }
+}

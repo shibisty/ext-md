@@ -1,0 +1,277 @@
+{
+  "appName": {
+    "message": "Media Grabber — save images and videos"
+  },
+  "appDesc": {
+    "message": "Finds every image and video on the page and lets you download the ones you pick."
+  },
+  "tabAll": {
+    "message": "All"
+  },
+  "tabImages": {
+    "message": "Images"
+  },
+  "tabVideos": {
+    "message": "Videos"
+  },
+  "refreshTitle": {
+    "message": "Rescan page"
+  },
+  "themeToggleTitle": {
+    "message": "Switch theme"
+  },
+  "selectAllTitle": {
+    "message": "Select/deselect all"
+  },
+  "shiftHint": {
+    "message": "Shift/Ctrl+click or drag to select several"
+  },
+  "colPicture": {
+    "message": "Picture"
+  },
+  "colSize": {
+    "message": "Size"
+  },
+  "colFormat": {
+    "message": "Format"
+  },
+  "selectedLabel": {
+    "message": "Selected: $SELECTED$ of $TOTAL$",
+    "placeholders": {
+      "selected": {
+        "content": "$1"
+      },
+      "total": {
+        "content": "$2"
+      }
+    }
+  },
+  "loadingText": {
+    "message": "Scanning page…"
+  },
+  "emptyDefault": {
+    "message": "No images or videos were found on this page."
+  },
+  "emptyUnavailable": {
+    "message": "This page can't be scanned."
+  },
+  "scanFailed": {
+    "message": "Couldn't scan the page."
+  },
+  "scanErrorPrefix": {
+    "message": "Scan error: "
+  },
+  "noActiveTab": {
+    "message": "Couldn't detect the active tab."
+  },
+  "askSaveLocation": {
+    "message": "Ask where to save each file"
+  },
+  "downloadButton": {
+    "message": "Download selected ($COUNT$)",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusDownloading": {
+    "message": "Downloading $COUNT$ file(s)…",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusNoStart": {
+    "message": "Couldn't start the download."
+  },
+  "statusSuccess": {
+    "message": "Done: saved $COUNT$ file(s) to Downloads/MediaGrabber.",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "statusPartial": {
+    "message": "Saved $OK$, failed: $FAIL$.",
+    "placeholders": {
+      "ok": {
+        "content": "$1"
+      },
+      "fail": {
+        "content": "$2"
+      }
+    }
+  },
+  "statusError": {
+    "message": "Error: $MSG$",
+    "placeholders": {
+      "msg": {
+        "content": "$1"
+      }
+    }
+  },
+  "badgeImageDefault": {
+    "message": "img"
+  },
+  "badgeVideoDefault": {
+    "message": "video"
+  },
+  "openSidePanelTitle": {
+    "message": "Open in side panel"
+  },
+  "openSettingsTitle": {
+    "message": "Settings"
+  },
+  "sizeFrom": {
+    "message": "From, px"
+  },
+  "sizeTo": {
+    "message": "To, px"
+  },
+  "sizeFilterClear": {
+    "message": "Reset"
+  },
+  "expandTitle": {
+    "message": "Open larger"
+  },
+  "commandDownloadAllDesc": {
+    "message": "Download all found/selected files right away"
+  },
+  "settingsTitle": {
+    "message": "Media Grabber — Settings"
+  },
+  "settingsLanguage": {
+    "message": "Language"
+  },
+  "langAuto": {
+    "message": "System (browser language)"
+  },
+  "settingsTheme": {
+    "message": "Theme"
+  },
+  "themeSystem": {
+    "message": "System (default)"
+  },
+  "themeLight": {
+    "message": "Light"
+  },
+  "themeDark": {
+    "message": "Dark"
+  },
+  "settingsDownload": {
+    "message": "Where files are saved"
+  },
+  "modeDownloadsTitle": {
+    "message": "Downloads folder"
+  },
+  "modeDownloadsDesc": {
+    "message": "Every file goes to Downloads/<folder>/<site>/… No dialog is ever shown."
+  },
+  "subfolderLabel": {
+    "message": "Subfolder name:"
+  },
+  "modeZipTitle": {
+    "message": "Single .zip archive"
+  },
+  "modeZipDesc": {
+    "message": "All selected files are bundled into one .zip and downloaded once."
+  },
+  "modeDirTitle": {
+    "message": "A folder I choose (asked once)"
+  },
+  "modeDirDesc": {
+    "message": "Pick a folder one time — every download after that is written straight there, no repeated dialogs."
+  },
+  "pickDirButton": {
+    "message": "Choose folder…"
+  },
+  "clearDirButton": {
+    "message": "Forget folder"
+  },
+  "dirUnsupportedNote": {
+    "message": "This mode needs a Chromium-based browser (Chrome/Edge) — not available here."
+  },
+  "noFolderChosen": {
+    "message": "No folder chosen yet"
+  },
+  "settingsHotkey": {
+    "message": "Keyboard shortcut"
+  },
+  "changeHotkeyButton": {
+    "message": "Change…"
+  },
+  "hotkeyNotSet": {
+    "message": "not set"
+  },
+  "hotkeyNote": {
+    "message": "Downloads everything currently selected (or all found items on first scan) without opening the popup, unless the folder-picker mode is active."
+  },
+  "settingsCache": {
+    "message": "Per-page selection memory"
+  },
+  "clearCacheButton": {
+    "message": "Clear saved selections"
+  },
+  "cacheNote": {
+    "message": "Media Grabber remembers which checkboxes you left on/off for each exact page URL, and restores them next time you open that page."
+  },
+  "savedText": {
+    "message": "Saved"
+  },
+  "ctxSaveThis": {
+    "message": "Save this"
+  },
+  "ctxSelectOnly": {
+    "message": "Select only this"
+  },
+  "ctxOpenLarge": {
+    "message": "Open larger"
+  },
+  "ctxOpenTab": {
+    "message": "Open in new tab"
+  },
+  "ctxCopyLink": {
+    "message": "Copy link"
+  },
+  "ctxLinkCopied": {
+    "message": "Link copied"
+  },
+  "statusStreamWarning": {
+    "message": "Saved $OK$, stream(s) not downloadable: $STREAMFAILED$ — this is an HLS/DASH stream and the browser won't hand over the raw bytes directly.",
+    "placeholders": {
+      "ok": {
+        "content": "$1"
+      },
+      "streamfailed": {
+        "content": "$2"
+      }
+    }
+  },
+  "streamFormatHint": {
+    "message": "Streaming video (HLS/DASH) — may fail to download, the browser doesn't always hand over the raw bytes"
+  },
+  "streamPreviewUnavailable": {
+    "message": "This is a live stream — the browser won't hand over the file directly, so it can't be shown in full or downloaded. Showing the last captured frame."
+  },
+  "ctrlHint": {
+    "message": "Click — select/deselect, Shift+click — range, drag — several"
+  },
+  "modeDownloadsDescShort": {
+    "message": "No dialogs at all."
+  },
+  "modeZipDescShort": {
+    "message": "One archive, one download."
+  },
+  "modeDirDescShort": {
+    "message": "Asks once, then stays quiet."
+  },
+  "permNeeded": {
+    "message": "Firefox hasn’t given Media Grabber access to websites yet — without it, external CSS files and cross-site media can’t be read."
+  },
+  "permGrant": {
+    "message": "Allow"
+  }
+}

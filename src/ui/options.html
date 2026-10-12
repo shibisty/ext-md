@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru" class="panel">
+<head>
+<meta charset="UTF-8" />
+<title>Media Grabber — Settings</title>
+<link rel="stylesheet" href="./popup.css" />
+<link rel="stylesheet" href="./options.css" />
+</head>
+<body class="panel options-body">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name" data-i18n="settingsTitle">Media Grabber — Settings</span>
+    </div>
+  </header>
+
+  <main class="options-main">
+
+    <section class="opt-section">
+      <h2 data-i18n="settingsLanguage">Language</h2>
+      <div class="opt-row">
+        <select id="langSelect">
+          <option value="auto" data-i18n="langAuto">System (browser language)</option>
+          <option value="ru">Русский</option>
+          <option value="en">English</option>
+          <option value="uk">Українська</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="opt-section">
+      <h2 data-i18n="settingsTheme">Theme</h2>
+      <div class="opt-row">
+        <select id="themeSelect">
+          <option value="system" data-i18n="themeSystem">System (default)</option>
+          <option value="light" data-i18n="themeLight">Light</option>
+          <option value="dark" data-i18n="themeDark">Dark</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="opt-section">
+      <h2 data-i18n="settingsDownload">Where files are saved</h2>
+
+      <label class="opt-radio">
+        <input type="radio" name="dlmode" value="downloads" />
+        <span>
+          <strong data-i18n="modeDownloadsTitle">Downloads folder</strong>
+          <small data-i18n="modeDownloadsDesc">Every file goes to Downloads/&lt;folder&gt;/&lt;site&gt;/… No dialog is ever shown.</small>
+        </span>
+      </label>
+      <div class="opt-row indent">
+        <label class="inline-label">
+          <span data-i18n="subfolderLabel">Subfolder name:</span>
+          <input type="text" id="subfolderInput" placeholder="MediaGrabber" />
+        </label>
+      </div>
+
+      <label class="opt-radio">
+        <input type="radio" name="dlmode" value="zip" />
+        <span>
+          <strong data-i18n="modeZipTitle">Single .zip archive</strong>
+          <small data-i18n="modeZipDesc">All selected files are bundled into one .zip and downloaded once.</small>
+        </span>
+      </label>
+
+      <label class="opt-radio" id="directoryModeLabel">
+        <input type="radio" name="dlmode" value="directory" />
+        <span>
+          <strong data-i18n="modeDirTitle">A folder I choose (asked once)</strong>
+          <small data-i18n="modeDirDesc">Pick a folder one time — every download after that is written straight there, no repeated dialogs.</small>
+        </span>
+      </label>
+      <div class="opt-row indent" id="directoryControls">
+        <button id="pickDirBtn" class="secondary-btn" data-i18n="pickDirButton">Choose folder…</button>
+        <span id="dirStatus" class="dir-status"></span>
+        <button id="clearDirBtn" class="text-btn" data-i18n="clearDirButton">Forget folder</button>
+      </div>
+      <p class="opt-note" id="dirUnsupportedNote" data-i18n="dirUnsupportedNote">This mode needs a Chromium-based browser (Chrome/Edge) — not available here.</p>
+    </section>
+
+    <section class="opt-section">
+      <h2 data-i18n="settingsHotkey">Keyboard shortcut</h2>
+      <div class="opt-row">
+        <span id="hotkeyValue" class="mono">—</span>
+        <button id="changeHotkeyBtn" class="secondary-btn" data-i18n="changeHotkeyButton">Change…</button>
+      </div>
+      <p class="opt-note" data-i18n="hotkeyNote">Downloads everything currently selected (or all found items on first scan) without opening the popup, unless the folder-picker mode is active.</p>
+    </section>
+
+    <section class="opt-section">
+      <h2 data-i18n="settingsCache">Per-page selection memory</h2>
+      <div class="opt-row">
+        <button id="clearCacheBtn" class="secondary-btn" data-i18n="clearCacheButton">Clear saved selections</button>
+      </div>
+      <p class="opt-note" data-i18n="cacheNote">Media Grabber remembers which checkboxes you left on/off for each exact page URL, and restores them next time you open that page.</p>
+    </section>
+
+    <p id="savedNote" class="saved-note"></p>
+  </main>
+
+  <script type="module" src="./options/main.ts"></script>
+</body>
+</html>

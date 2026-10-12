@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru" class="panel">
+<head>
+<meta charset="UTF-8" />
+<title>Media Grabber</title>
+<link rel="stylesheet" href="./popup.css" />
+</head>
+<body class="panel">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">Media Grabber</span>
+    </div>
+    <div class="topbar-actions">
+      <button id="themeBtn" class="icon-btn" data-i18n-title="themeToggleTitle">☀</button>
+      <button id="settingsBtn" class="icon-btn" data-i18n-title="openSettingsTitle">⚙</button>
+      <button id="refreshBtn" class="icon-btn" data-i18n-title="refreshTitle">⟳</button>
+    </div>
+  </header>
+
+  <div id="mainView">
+    <div class="perm-banner hidden" id="permBanner">
+      <span data-i18n="permNeeded">Media Grabber has no access to websites yet.</span>
+      <button id="permGrantBtn" class="secondary-btn" data-i18n="permGrant">Allow</button>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button class="tab active" data-filter="all"><span data-i18n="tabAll">All</span> <span class="count" id="countAll">0</span></button>
+      <button class="tab" data-filter="image"><span data-i18n="tabImages">Images</span> <span class="count" id="countImages">0</span></button>
+      <button class="tab" data-filter="video"><span data-i18n="tabVideos">Videos</span> <span class="count" id="countVideos">0</span></button>
+    </nav>
+
+    <div class="size-filter">
+      <label>
+        <span data-i18n="sizeFrom">From, px</span>
+        <input type="number" id="sizeMin" min="0" placeholder="0" />
+      </label>
+      <label>
+        <span data-i18n="sizeTo">To, px</span>
+        <input type="number" id="sizeMax" min="0" placeholder="∞" />
+      </label>
+      <button id="sizeFilterClear" class="text-btn" data-i18n="sizeFilterClear">Reset</button>
+    </div>
+
+    <div class="toolbar">
+      <span id="selectAllLabel">—</span>
+      <span class="hint" id="ctrlHint" data-i18n="ctrlHint">Click — only this, Ctrl+click — add, drag — several</span>
+    </div>
+
+    <main id="tableArea" class="table-area">
+      <div class="state" id="loadingState">
+        <div class="spinner"></div>
+        <p data-i18n="loadingText">Scanning…</p>
+      </div>
+      <div class="state hidden" id="emptyState">
+        <p id="emptyStateText" data-i18n="emptyDefault">Nothing found.</p>
+      </div>
+      <div class="table-wrap hidden" id="tableWrap">
+        <table id="mediaTable">
+          <thead>
+            <tr>
+              <th class="col-check"><input type="checkbox" id="selectAllCheckbox" checked data-i18n-title="selectAllTitle" /></th>
+              <th class="sortable col-thumb-w" data-sort="type"><span class="sort-indicator"></span></th>
+              <th class="sortable col-size-w" data-sort="size">
+                <span data-i18n="colSize">Size</span><span class="sort-indicator"></span>
+              </th>
+              <th class="sortable col-format-w" data-sort="format">
+                <span data-i18n="colFormat">Format</span><span class="sort-indicator"></span>
+              </th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <button id="downloadBtn" class="primary-btn" disabled>—</button>
+      <p id="statusLine" class="status-line"></p>
+    </footer>
+  </div>
+
+  <div id="settingsView" class="settings-view hidden">
+    <div class="settings-scroll">
+      <section class="s-section">
+        <h3 data-i18n="settingsLanguage">Language</h3>
+        <select id="langSelect">
+          <option value="auto" data-i18n="langAuto">System</option>
+          <option value="ru">Русский</option>
+          <option value="en">English</option>
+          <option value="uk">Українська</option>
+        </select>
+      </section>
+
+      <section class="s-section">
+        <h3 data-i18n="settingsTheme">Theme</h3>
+        <select id="themeSelect">
+          <option value="system" data-i18n="themeSystem">System</option>
+          <option value="light" data-i18n="themeLight">Light</option>
+          <option value="dark" data-i18n="themeDark">Dark</option>
+        </select>
+      </section>
+
+      <section class="s-section">
+        <h3 data-i18n="settingsDownload">Where files are saved</h3>
+
+        <label class="s-radio">
+          <input type="radio" name="dlmode" value="downloads" />
+          <span>
+            <strong data-i18n="modeDownloadsTitle">Downloads folder</strong>
+            <small data-i18n="modeDownloadsDescShort">No dialog, ever.</small>
+          </span>
+        </label>
+        <div class="s-indent" id="s-subfolderRow">
+          <input type="text" id="subfolderInput" placeholder="MediaGrabber" />
+        </div>
+
+        <label class="s-radio">
+          <input type="radio" name="dlmode" value="zip" />
+          <span>
+            <strong data-i18n="modeZipTitle">Single .zip</strong>
+            <small data-i18n="modeZipDescShort">One archive, one download.</small>
+          </span>
+        </label>
+
+        <label class="s-radio" id="directoryModeLabel">
+          <input type="radio" name="dlmode" value="directory" />
+          <span>
+            <strong data-i18n="modeDirTitle">Chosen folder</strong>
+            <small data-i18n="modeDirDescShort">Pick once, reuse silently.</small>
+          </span>
+        </label>
+        <div class="s-indent" id="s-directoryControls">
+          <button id="pickDirBtn" class="secondary-btn" data-i18n="pickDirButton">Choose…</button>
+          <span id="dirStatus" class="dir-status"></span>
+          <button id="clearDirBtn" class="text-btn" data-i18n="clearDirButton">Forget</button>
+        </div>
+        <p class="s-note" id="dirUnsupportedNote" data-i18n="dirUnsupportedNote">Chrome/Edge only.</p>
+      </section>
+
+      <section class="s-section">
+        <h3 data-i18n="settingsHotkey">Keyboard shortcut</h3>
+        <div class="s-row">
+          <span id="hotkeyValue" class="mono">—</span>
+          <button id="changeHotkeyBtn" class="secondary-btn" data-i18n="changeHotkeyButton">Change…</button>
+        </div>
+      </section>
+
+      <section class="s-section">
+        <h3 data-i18n="settingsCache">Selection memory</h3>
+        <button id="clearCacheBtn" class="secondary-btn" data-i18n="clearCacheButton">Clear saved selections</button>
+      </section>
+
+      <p id="savedNote" class="saved-note"></p>
+    </div>
+  </div>
+
+  <div class="lightbox hidden" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <div class="lightbox-content" id="lightboxContent"></div>
+  </div>
+
+  <script type="module" src="./popup/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "name": "media-grabber",
+  "version": "1.3.0",
+  "private": true,
+  "description": "Media Grabber — find and download images and videos from the current page (Chrome + Firefox)",
+  "type": "module",
+  "scripts": {
+    "dev:chrome": "vite build --mode chrome --watch",
+    "dev:firefox": "vite build --mode firefox --watch",
+    "build:chrome": "vite build --mode chrome",
+    "build:firefox": "vite build --mode firefox",
+    "build": "npm run build:chrome && npm run build:firefox",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "npm run build:chrome && playwright test",
+    "zip": "npm run build && node scripts/pack.mjs",
+    "check": "npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/chrome": "^0.1.43",
+    "@types/node": "^22.10.0",
+    "jsdom": "^27.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.7",
+    "vitest": "~4.0.18"
+  }
+}

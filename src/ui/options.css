@@ -1,0 +1,119 @@
+html.panel, body.options-body {
+  width: auto;
+  max-height: none;
+  min-height: 100vh;
+}
+
+.options-main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 18px 20px 40px;
+}
+
+.opt-section {
+  margin-bottom: 26px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.opt-section:last-of-type { border-bottom: none; }
+
+.opt-section h2 {
+  font-size: 14px;
+  margin: 0 0 10px;
+  color: var(--text);
+}
+
+.opt-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.opt-row.indent { margin-left: 26px; margin-top: 4px; }
+
+select, input[type="text"], input[type="number"] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 6px 9px;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+.opt-radio {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.opt-radio input { margin-top: 3px; accent-color: var(--amber); }
+
+.opt-radio strong {
+  display: block;
+  font-size: 13px;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.opt-radio small {
+  display: block;
+  font-size: 11.5px;
+  color: var(--text-dim);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.inline-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--text-dim);
+}
+
+.secondary-btn {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 7px 12px;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+.secondary-btn:hover { border-color: var(--text-dim); }
+
+.text-btn {
+  background: transparent;
+  border: none;
+  color: var(--amber-dim);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 2px;
+}
+.text-btn:hover { text-decoration: underline; }
+
+.dir-status {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.opt-note {
+  font-size: 11.5px;
+  color: var(--text-dim);
+  margin: 6px 0 0 26px;
+  line-height: 1.5;
+}
+
+.saved-note {
+  font-size: 12px;
+  color: var(--teal);
+  min-height: 16px;
+  margin-top: 6px;
+}
+
+.mono { font-family: "SFMono-Regular", Consolas, monospace; }
